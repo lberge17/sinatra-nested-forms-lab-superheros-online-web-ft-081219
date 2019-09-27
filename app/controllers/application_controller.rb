@@ -19,7 +19,7 @@ class App < Sinatra::Base
     params[:team][:members].each do |member_data|
       member = Member.new(name: member_data[:name], power: member_data[:power], bio: member_data[:bio])
       member.team = @team
-      member.save
+      #member.save
     end
     
     erb :team
