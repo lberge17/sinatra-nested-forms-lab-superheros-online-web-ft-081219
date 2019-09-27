@@ -8,19 +8,12 @@ class App < Sinatra::Base
     erb :super_hero
   end
   
-#  get "/teams/:id" do
-#    @team = Team.find(params[:id])
-#    
-#    erb :team
-#  end
-  
   post '/teams' do
     @team = Team.new(name: params[:team][:name], motto: params[:team][:motto])
     params[:team][:members].each do |member_data|
       member = Member.new(name: member_data[:name], power: member_data[:power], bio: member_data[:bio])
       member.team = @team
-      @team.members << member
-      #member.save
+      member.save
     end
     
     erb :team
