@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_27_011753) do
+ActiveRecord::Schema.define(version: 2019_09_27_011918) do
+
+  create_table "members", force: :cascade do |t|
+    t.string "name"
+    t.string "power"
+    t.string "bio"
+    t.integer "team_id"
+  end
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
