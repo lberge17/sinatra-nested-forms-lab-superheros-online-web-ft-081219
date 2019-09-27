@@ -8,4 +8,8 @@ class Team #< ActiveRecord::Base
     @motto = motto
     @@all << self
   end
+  
+  def self.all
+    @@all
+  end
 end
