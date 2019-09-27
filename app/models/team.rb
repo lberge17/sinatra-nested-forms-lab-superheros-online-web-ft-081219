@@ -3,7 +3,7 @@ class Team #< ActiveRecord::Base
   attr_accessor :name, :motto, :members
   @@all = []
   
-  def initialize(:name, :motto)
+  def initialize(name:, motto:)
     @name = name
     @motto = motto
     @members = []
