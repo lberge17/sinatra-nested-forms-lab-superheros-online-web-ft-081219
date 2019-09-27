@@ -3,7 +3,7 @@ class Member #< ActiveRecord::Base
   attr_accessor :name, :power, :bio, :team
   @@all = []
   
-  def initialize(:name, :power, :bio)
+  def initialize(name:, power:, bio:)
     @name = name
     @power = power
     @bio = bio
